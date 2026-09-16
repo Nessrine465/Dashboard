@@ -6,7 +6,7 @@
 
 Le dashboard vise à montrer que la population d'exoplanètes actuellement connue dépend en partie des techniques utilisées pour les détecter et de leur évolution dans le temps.
 
-L'objectif n'est donc pas uniquement de présenter le nombre d'exoplanètes découvertes, mais de montrer comment les méthodes d'observation influencent la population que nous connaissons aujourd'hui.
+L'objectif n'est donc pas uniquement de présenter le nombre d'exoplanètes découvertes, mais de montrer comment les méthodes de détection influencent la population que nous connaissons aujourd'hui.
 
 ---
 
@@ -34,7 +34,7 @@ Méthode ayant permis de détecter le plus grand nombre d'exoplanètes dans la s
 
 L'indicateur est accompagné de la part des découvertes correspondant à cette méthode.
 
-Il permet d'identifier rapidement la technique la plus représentée et de vérifier comment cette domination évolue lorsque l'utilisateur modifie la période ou les méthodes sélectionnées.
+Il permet d'identifier rapidement la technique la plus représentée et d'observer comment cette domination évolue lorsque l'utilisateur modifie la période ou les méthodes sélectionnées.
 
 ### KPI 3 — Type planétaire dominant
 
@@ -48,7 +48,7 @@ Il permet d'identifier rapidement le profil planétaire dominant et d'observer s
 
 ## 4. Structure du dashboard
 
-Le dashboard suit une logique de **storytelling progressif** : partir d'une vue synthétique de la population observée, comprendre le rôle des méthodes de détection, puis observer leur évolution dans le temps.
+Le dashboard suit une logique de **storytelling progressif** : partir d'une vue synthétique de la population observée, comprendre le rôle des méthodes de détection, puis observer l'évolution des découvertes dans le temps.
 
 ### Zone 1 — Vue d'ensemble
 
@@ -69,13 +69,13 @@ Un diagramme en barres présente la répartition des exoplanètes selon quatre c
 - Neptunienne ;
 - Géante gazeuse.
 
-La catégorie la plus représentée est mise en évidence afin de faciliter la lecture du graphique.
+La catégorie la plus représentée est mise en évidence en vert, la moins représentée en rouge et les catégories intermédiaires en gris, afin de faciliter la comparaison visuelle des extrêmes.
 
-Cette visualisation permet d'identifier rapidement la structure de la population d'exoplanètes observée.
+Cette visualisation permet d'identifier rapidement la structure de la population d'exoplanètes observée et de vérifier si cette répartition évolue lorsque les filtres sont modifiés.
 
 ### Zone 3 — Méthodes de détection
 
-Un graphique temporel présente le nombre cumulé de découvertes pour les principales méthodes de détection.
+Un graphique temporel présente le nombre cumulé de découvertes pour les quatre méthodes de détection les plus représentées dans la sélection.
 
 Il permet de comparer leur contribution au catalogue d'exoplanètes et d'observer comment leur importance évolue dans le temps.
 
@@ -83,9 +83,9 @@ Il permet de comparer leur contribution au catalogue d'exoplanètes et d'observe
 
 Un graphique en courbe présente le nombre d'exoplanètes découvertes chaque année.
 
-L'année présentant le plus grand nombre de découvertes dans la sélection est mise en évidence.
+L'année présentant le plus grand nombre de découvertes dans la période sélectionnée est mise en évidence par un point vert.
 
-Cette visualisation permet d'identifier les périodes d'accélération des découvertes et de les comparer selon les méthodes sélectionnées.
+Cette visualisation permet d'identifier les principales périodes d'accélération des découvertes et d'observer comment celles-ci évoluent selon les méthodes sélectionnées.
 
 ---
 
@@ -98,9 +98,9 @@ La sidebar contient deux filtres principaux :
 
 Le filtre sur les méthodes permet de sélectionner une, plusieurs ou toutes les méthodes disponibles.
 
-Les trois KPIs et les trois visualisations réagissent aux filtres sélectionnés.
+Les KPIs et les visualisations sont automatiquement recalculés selon les filtres sélectionnés.
 
-Cette interactivité permet à l'utilisateur de tester le message du dashboard sur différentes périodes et différentes populations.
+Cette interactivité permet à l'utilisateur d'explorer différentes périodes et différentes méthodes et d'observer directement leur effet sur les résultats présentés.
 
 ---
 
@@ -112,11 +112,13 @@ Le diagramme en barres est adapté à la comparaison de catégories.
 
 Il permet de comparer directement le nombre d'exoplanètes appartenant à chaque type planétaire et d'identifier rapidement les catégories les plus et les moins représentées.
 
+L'utilisation de couleurs distinctes pour les valeurs extrêmes facilite la lecture tout en conservant une représentation simple.
+
 ### Courbes cumulées — Méthodes de détection
 
 Une représentation temporelle cumulée permet de comparer la contribution des principales méthodes de détection au catalogue d'exoplanètes.
 
-Elle met en évidence les différences de rythme et de volume de découvertes entre les méthodes.
+Elle met en évidence les différences de rythme et de volume de découvertes entre les méthodes au fil du temps.
 
 ### Courbe temporelle — Découvertes annuelles
 
@@ -124,7 +126,9 @@ La courbe temporelle est adaptée à l'analyse de l'évolution du nombre de déc
 
 Elle permet d'identifier les phases d'accélération ainsi que l'année présentant le plus grand nombre de découvertes dans la période sélectionnée.
 
-Ces trois visualisations répondent au même message :
+Le pic est volontairement mis en évidence afin d'attirer l'attention sur cette information importante.
+
+Ces trois visualisations contribuent au même message :
 
 **notre vision de la population d'exoplanètes dépend en partie des techniques utilisées pour les détecter et de leur évolution dans le temps.**
 
@@ -132,32 +136,50 @@ Ces trois visualisations répondent au même message :
 
 ## 7. Choix de design et hiérarchie visuelle
 
-Le dashboard adopte une structure volontairement simple afin de limiter la charge cognitive.
+Le dashboard adopte une structure volontairement simple afin de limiter la charge cognitive et de faciliter la compréhension des résultats.
 
 La hiérarchie de lecture est la suivante :
 
 1. message principal ;
 2. KPIs de synthèse ;
 3. population observée ;
-4. comparaison des méthodes ;
-5. évolution temporelle.
+4. comparaison des méthodes de détection ;
+5. évolution des découvertes dans le temps.
 
-Les titres des visualisations sont formulés comme des messages afin d'accompagner l'utilisateur dans la lecture des résultats.
+Les visualisations sont organisées dans des onglets afin de séparer les différentes étapes de l'analyse tout en conservant une navigation simple.
 
-Les couleurs sont utilisées avec parcimonie pour mettre en évidence les informations importantes, notamment la catégorie dominante ou le pic de découvertes.
+Les titres des visualisations sont formulés comme des messages afin d'accompagner l'utilisateur dans la lecture et de renforcer le storytelling.
+
+Les couleurs sont utilisées avec parcimonie pour mettre en évidence les informations importantes sans surcharger les graphiques.
 
 ---
 
-## 8. Conclusion 
+## 8. Interactivité et storytelling
+
+L'interactivité constitue une partie essentielle du dashboard.
+
+L'utilisateur peut modifier la période d'analyse et sélectionner une ou plusieurs méthodes de détection. Les KPIs, les textes d'accompagnement et les visualisations sont alors actualisés selon la sélection.
+
+Le storytelling suit trois étapes :
+
+1. **Observer la population connue** en identifiant les types planétaires les plus représentés ;
+2. **Comparer les méthodes de détection** afin d'observer leur contribution respective aux découvertes ;
+3. **Analyser l'évolution dans le temps** afin d'identifier les principales phases d'accélération des découvertes.
+
+Cette organisation permet de passer progressivement d'une vue générale de la population à une analyse temporelle des découvertes.
+
+---
+
+## 9. Conclusion attendue
 
 Le dashboard doit permettre de mettre en évidence que la population d'exoplanètes actuellement connue ne peut pas être interprétée indépendamment des techniques utilisées pour la détecter.
 
 La répartition des types planétaires fournit une première vision de la population observée.
 
-La comparaison des méthodes de détection montre que certaines techniques contribuent beaucoup plus fortement que d'autres au catalogue connu.
+La comparaison des méthodes de détection montre que les différentes techniques ne contribuent pas dans les mêmes proportions au catalogue connu.
 
-Enfin, l'évolution annuelle des découvertes met en évidence des périodes de forte accélération.
+Enfin, l'évolution annuelle des découvertes permet d'identifier des périodes de forte accélération.
 
-L'interactivité permet à l'utilisateur de modifier la période et les méthodes sélectionnées afin de vérifier comment ces constats évoluent.
+Grâce aux filtres interactifs, l'utilisateur peut modifier la période et les méthodes sélectionnées afin d'observer comment ces constats évoluent.
 
 L'objectif final est ainsi de montrer que **la population d'exoplanètes actuellement connue est en partie façonnée par les méthodes et les technologies utilisées pour les détecter.**
