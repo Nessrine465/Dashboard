@@ -87,6 +87,18 @@ L'année présentant le plus grand nombre de découvertes dans la période séle
 
 Cette visualisation permet d'identifier les principales périodes d'accélération des découvertes et d'observer comment celles-ci évoluent selon les méthodes sélectionnées.
 
+### Page complémentaire — Détail des exoplanètes
+
+Une seconde page permet d'explorer plus précisément le catalogue d'exoplanètes.
+
+Elle propose :
+- un filtre par méthode de détection ;
+- un filtre par type planétaire ;
+- le nombre d'exoplanètes correspondant à la sélection ;
+- un tableau détaillé présentant notamment le nom de l'exoplanète, son étoile hôte, sa méthode de détection, son année de découverte, son type et son rayon.
+
+Cette page complète le dashboard principal : la page principale est orientée **synthèse et storytelling**, tandis que la page de détail permet une **exploration plus fine des données**.
+
 ---
 
 ## 5. Filtres interactifs
