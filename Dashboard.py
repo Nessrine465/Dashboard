@@ -11,7 +11,6 @@ st.markdown("""
 .stApp { background:var(--paper); }
 [data-testid="stHeader"] { background:var(--paper); }
 [data-testid="stToolbar"] { visibility:hidden; }
-[data-testid="stSidebarNav"] { display:none; }
 [data-testid="stSidebar"] { background:#f2f4f8; }
 [data-testid="stSidebar"] > div:first-child { padding:2rem 1.25rem; }
 [data-testid="stSidebar"] label, [data-testid="stSidebar"] p { color:var(--muted) !important; }
@@ -26,10 +25,13 @@ h2 { font-size:1.55rem !important; }
 [data-testid="stMetricLabel"] { color:var(--muted); font-size:.8rem; font-weight:700; }
 [data-testid="stMetricValue"] { color:var(--accent); font-size:1.45rem; }
 [data-baseweb="select"] > div { background:#fff !important; border-color:#d9deea !important; }
+[data-baseweb="select"] input { color:var(--ink) !important; }
+[data-baseweb="select"] [data-testid="stMarkdownContainer"],
+[data-baseweb="select"] [data-testid="stMarkdownContainer"] p { color:var(--ink) !important; }
 [data-baseweb="tag"] { background:#e9ecfa !important; color:#4f5eae !important; }
 [data-baseweb="tag"] span { color:#4f5eae !important; }
 [role="listbox"] { background:#fff !important; }
-[role="option"] { color:var(--ink) !important; }
+[role="option"], [role="option"] * { color:var(--ink) !important; background:#fff !important; }
 .stTabs [data-baseweb="tab-list"] { gap:1.4rem; border-bottom:1px solid var(--line); }
 .stTabs [data-baseweb="tab"] { height:46px; color:var(--muted); font-weight:700; font-size:.9rem; }
 .stTabs [aria-selected="true"] { color:var(--accent) !important; border-bottom:2px solid var(--accent) !important; }
