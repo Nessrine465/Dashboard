@@ -10,8 +10,9 @@ st.markdown("""
 :root { --ink:#172033; --muted:#667085; --line:#e7eaf0; --paper:#fbfcfe; --accent:#6874c9; }
 .stApp { background:var(--paper); }
 [data-testid="stHeader"] { background:var(--paper); }
-[data-testid="stToolbar"] { visibility:hidden; }
 [data-testid="stSidebar"] { background:#f2f4f8; }
+[data-testid="stSidebarCollapseButton"],
+[data-testid="stSidebarCollapseButton"] button { visibility:visible !important; display:flex !important; }
 [data-testid="stSidebar"] > div:first-child { padding:2rem 1.25rem; }
 [data-testid="stSidebar"] label, [data-testid="stSidebar"] p { color:var(--muted) !important; }
 [data-testid="stSidebar"] h1, [data-testid="stSidebar"] h2, [data-testid="stSidebar"] h3 { color:var(--ink) !important; }
