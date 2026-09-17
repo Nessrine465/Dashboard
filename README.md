@@ -6,6 +6,14 @@ Le projet fait suite à une analyse exploratoire des données (AED) et propose u
 
 ---
 
+## Application déployée
+
+Le dashboard est accessible en ligne sur Streamlit Community Cloud :
+
+👉 **[Accéder au Dashboard Exoplanètes](https://dashboard-tp.streamlit.app)**
+
+---
+
 ## Dashboard
 
 Le dashboard permet d'explorer les données grâce à deux filtres interactifs :
@@ -15,13 +23,15 @@ Le dashboard permet d'explorer les données grâce à deux filtres interactifs :
 
 Les indicateurs et graphiques sont automatiquement actualisés selon la sélection de l'utilisateur.
 
-Le dashboard contient trois vues :
+Le dashboard contient trois vues principales :
 
 **Population observée** — répartition des exoplanètes par type planétaire.
 
 **Méthodes de détection** — évolution cumulée des découvertes selon les principales méthodes.
 
 **Évolution dans le temps** — nombre de découvertes par année et mise en évidence du pic de découvertes.
+
+Une page complémentaire **Détail des exoplanètes** permet d'explorer le catalogue de manière plus détaillée selon la méthode de détection et le type planétaire.
 
 ---
 
@@ -31,7 +41,11 @@ Le dashboard contient trois vues :
 Dashboard/
 │
 ├── app.py
-│   └── Application Streamlit
+│   └── Application principale Streamlit
+│
+├── pages/
+│   └── 1_Detail_exoplanetes.py
+│       └── Vue détaillée des exoplanètes
 │
 ├── projet_E_dataset_exoplanets.csv
 │   └── Dataset utilisé par l'application
@@ -58,49 +72,8 @@ Dashboard/
 
 ---
 
-## Installation
-
-Cloner le repository :
-
-```bash
-git clone https://github.com/Nessrine465/Dashboard.git
-```
-
-Se placer dans le projet :
-
-```bash
-cd Dashboard
-```
-
-Installer les dépendances :
-
-```bash
-pip install -r requirements.txt
-```
-
-Lancer l'application :
-
-```bash
-streamlit run app.py
-```
-
----
-
-## Requirements
-
-```text
-streamlit
-pandas
-numpy
-matplotlib
-```
-
----
-
 ## Documentation
 
 Les choix de conception du dashboard, le message principal, l'audience cible, les KPIs et la justification des visualisations sont détaillés dans :
 
- `cadrage.md`
-
----
+`cadrage.md`
